@@ -1,4 +1,4 @@
-package bc10.lgodoy;
+package bc10.lgodoy.BrowserAndDrive;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
