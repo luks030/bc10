@@ -1,4 +1,4 @@
-package bc10.lgodoy.WebElements;
+package bc10.lgodoy.EjerciciosSemana3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -55,7 +55,6 @@ public class EjercicioSpDigital {
         WebElement armados = driver.findElement(armadoSpLabsLocalizador);
         armados.click();
     }
-
     @AfterEach
     void close() {
         driver.close();
