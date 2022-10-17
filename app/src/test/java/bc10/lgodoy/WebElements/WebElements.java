@@ -7,16 +7,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import java.time.Duration;
 
 
 public class WebElements {
     WebDriver driver;
     //localizadores
-    By barraBusquedaLocalizador = By.name("q");
-    By botonBuscarConGoogleLocalizador = By.name("btnK");
-
+    @FindBy(name = "q")
+            WebElement barraGoogle;
+    @FindBy(name = "btnK")
+            WebElement botonBuscarGoogle;
     @BeforeEach
     void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -25,19 +27,16 @@ public class WebElements {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-
+        PageFactory.initElements(driver, this);
     }
     @Test
     void busquedaGoogle(){
         //con WebElement capturamos el elemento, atravez de sus atributos
-        WebElement barraBusqueda = driver.findElement(barraBusquedaLocalizador);
-        barraBusqueda.clear();
-        barraBusqueda.sendKeys("Tsoft");
-        barraBusqueda.sendKeys(Keys.ESCAPE);
-        WebElement btnBuscarConGoogle = driver.findElement(botonBuscarConGoogleLocalizador);
-        btnBuscarConGoogle.click();
+        barraGoogle.sendKeys("Tsoft");
+        barraGoogle.sendKeys(Keys.ESCAPE);
+        botonBuscarGoogle.click();
+        Assertions.assertEquals("Tsoft - Buscar con Google",driver.getTitle());
     }
-
     @AfterEach
     void close(){
         driver.close();

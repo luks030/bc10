@@ -1,4 +1,4 @@
-package bc10.lgodoy.EjerciciosSemana3;
+package bc10.lgodoy.Ejercicios;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
