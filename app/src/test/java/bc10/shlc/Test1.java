@@ -47,8 +47,8 @@ public class Test1 {
         WebElement btnFilterName = driver.findElement(btnFilterNameLoc);
         boolean btnFilter  =  btnFilterName.isDisplayed();
         System.out.println("Boton Filter by Name esta funcionando de manera correta: " +btnFilter);
+        Assertions.assertEquals("Filter by name",btnFilterName.getAccessibleName());
         Assertions.assertTrue(btnFilter);
-
 
     }
     @Test
@@ -57,6 +57,7 @@ public class Test1 {
         WebElement btnNewComputer = driver.findElement(btnNewComputerLoc);
         boolean btnFilter  =  btnNewComputer.isDisplayed();
         System.out.println("Boton Filter by Name esta funcionando de manera correta: " +btnFilter);
+        Assertions.assertEquals("Add a new computer",btnNewComputer.getAccessibleName());
         Assertions.assertTrue(btnFilter);
 
 
@@ -74,10 +75,6 @@ public class Test1 {
             Assertions.assertEquals(nombre, columnas.get(i).getText());
 
         }
-
-
-
-
 
     }
 
