@@ -1,4 +1,4 @@
-package bc10.danielFabricio;
+package bc10.drfa;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
