@@ -1,6 +1,7 @@
 package bc10.lgodoy.Ejercicios;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -8,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -30,12 +30,8 @@ public class EjercicioTabla2 {
         //ejercicio tabla 2
         List<WebElement> webTables = driver.findElements(By.tagName("table"));
         WebElement tabla2 = webTables.get(1);
-        //cuantas filas y columnas hay
         List<WebElement> filas2 = tabla2.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
-        //System.out.println(filas.size());
         List<WebElement> columnas2 = tabla2.findElement(By.tagName("thead")).findElements(By.tagName("th"));
-        //System.out.println(columnas.size());
-        //obtener el web element due y presionar dos veces para ordenar la tabla1
         if (columnas2.get(1).getText().contains("First Name")) {
             columnas2.get(1).click();
         }
@@ -48,8 +44,10 @@ public class EjercicioTabla2 {
             apellido= filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[1]")).getText();
             deuda = filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[4]")).getText();
             System.out.println("Nombre: " + nombre + ", Apellido: " + apellido + ", Deuda: " + deuda);
-
         }
-
+    }
+    @AfterEach
+    void close() {
+        driver.close();
     }
 }
