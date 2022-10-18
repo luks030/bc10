@@ -39,17 +39,17 @@ public class EjercicioTabla2 {
         if (columnas2.get(1).getText().contains("First Name")) {
             columnas2.get(1).click();
         }
-        String nombre[] = new String[filas2.size()];
-        String apellido[] = new String[filas2.size()];
-        String deuda[] = new String[filas2.size()];
+        String nombre="";
+        String apellido="";
+        String deuda="";
 
         for (int i = 0; i < filas2.size(); i++) {
-            nombre[i] = filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[2]")).getText();
-            apellido[i] = filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[1]")).getText();
-            deuda[i] = filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[4]")).getText();
+            nombre = filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[2]")).getText();
+            apellido= filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[1]")).getText();
+            deuda = filas2.get(i).findElement(By.xpath(" //*[@id=\"table2\"]/tbody/tr["+(i+1)+"]/td[4]")).getText();
+            System.out.println("Nombre: " + nombre + ", Apellido: " + apellido + ", Deuda: " + deuda);
+
         }
-        for (int i = 0; i < filas2.size(); i++) {
-            System.out.println("Nombre: " + nombre[i] + ", Apellido: " + apellido[i] + ", Deuda: " + deuda[i]);
-        }
+
     }
 }
