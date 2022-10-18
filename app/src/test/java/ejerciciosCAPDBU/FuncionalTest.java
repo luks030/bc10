@@ -1,5 +1,6 @@
 package ejerciciosCAPDBU;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -46,4 +47,10 @@ public class FuncionalTest {
         btnCrear.click();
         Assertions.assertEquals("Done ! " + "Computer BC10_CAPDBU has been created", alertSuccess.getText());
     }
+
+    @AfterEach
+    void clean(){
+        driver.close();
+    }
+
 }

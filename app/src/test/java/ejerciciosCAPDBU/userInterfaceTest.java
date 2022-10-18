@@ -1,5 +1,6 @@
 package ejerciciosCAPDBU;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -45,4 +46,10 @@ public class userInterfaceTest {
         Assertions.assertEquals("Discontinued",divDiscontinued.getText());
         Assertions.assertEquals("Company", divCompany.getText());
     }
+
+    @AfterEach
+    void clean(){
+        driver.close();
+    }
+
 }
