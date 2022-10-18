@@ -44,10 +44,10 @@ public class Test3 {
     void crearComputador(){
         // validacion de mandar el texto al imput computer name
         WebElement nameC = driver.findElement(computerName);
-        nameC.sendKeys("BC10_XX");
+        nameC.sendKeys("BC10_DF");
         // apreta el boton crear este computador
         WebElement crearNuevo = driver.findElement(createThis);
         crearNuevo.click();
-        Assertions.assertEquals("Done ! Computer BC10_XX has been created", driver.findElement(doneEsclamasion).getText());
+        Assertions.assertEquals("Done ! Computer BC10_DF has been created", driver.findElement(doneEsclamasion).getText());
     }
 }
