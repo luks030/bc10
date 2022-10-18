@@ -1,4 +1,4 @@
-package bc10.lgodoy.EjercicioGrupalRL;
+package bc10.EjercicioGrupalRL;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
