@@ -79,8 +79,6 @@ public class Test1 {
             Assertions.assertEquals(nombre, columnas.get(i).getText());
         }
 
-
-
     }
 
     @AfterEach

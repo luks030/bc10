@@ -51,7 +51,7 @@ public class UserInterfaceEj {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile,new File("./FilterByname.png"));
 
-// CASO "ADD NEW COMPUTER"
+        // CASO "ADD NEW COMPUTER"
         WebElement btnAddNewcomputer = driver.findElement(AddNewcomputer);
         btnAddNewcomputer.click();
 

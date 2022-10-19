@@ -39,7 +39,7 @@ public class userInterfaceTest {
         btnFBN.click();
         Assertions.assertEquals("",btnFBN.getText());
         btnAdd.click();
-//Validamos la existencia y uso del btnAdd verificando la direccion del button con la del driver.
+        //Validamos la existencia y uso del btnAdd verificando la direccion del button con la del driver.
         Assertions.assertEquals("https://computer-database.gatling.io/computers/new",driver.getCurrentUrl());
         Assertions.assertEquals("Computer name", divComputerName.getText());
         Assertions.assertEquals("Introduced", divIntroduced.getText());

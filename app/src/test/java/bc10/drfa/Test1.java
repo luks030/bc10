@@ -80,8 +80,5 @@ public class Test1 {
         WebElement cpany = driver.findElement(company);
         action.moveToElement(cpany).click().perform();
 
-
-
-
     }
 }

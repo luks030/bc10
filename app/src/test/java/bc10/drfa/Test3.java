@@ -9,6 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
 
@@ -23,8 +24,8 @@ public class Test3 {
 
     @BeforeEach
     void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.get("https://computer-database.gatling.io/");
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1500));
@@ -37,7 +38,7 @@ public class Test3 {
         int width = dimesion.getWidth();
         int height = dimesion.getHeight();
         Assertions.assertEquals(1936,width);
-        Assertions.assertEquals(1066,height);
+        Assertions.assertEquals(1056,height);
     }
 
     @Test

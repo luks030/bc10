@@ -28,8 +28,8 @@ public class Parte2 {
     public void test2_1(){
         driver.manage().window().maximize();
         Dimension dimension = driver.manage().window().getSize();
-        Assertions.assertEquals(1382,dimension.getWidth());
-        Assertions.assertEquals(744,dimension.getHeight());
+        Assertions.assertEquals(1936,dimension.getWidth());
+        Assertions.assertEquals(1056,dimension.getHeight());
         WebElement btnAddCompu = driver.findElement(btnAddLocalizador);
         btnAddCompu.click();
         WebElement btnCreateCompu = driver.findElement(btnCreateComputerLocalizador);
