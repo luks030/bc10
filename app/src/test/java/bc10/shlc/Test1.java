@@ -10,6 +10,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 
 import java.time.Duration;
@@ -26,8 +27,8 @@ public class Test1 {
     @BeforeEach
     void setUp(){
         //Configuracion inicial
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().setSize(new Dimension(800, 600));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));

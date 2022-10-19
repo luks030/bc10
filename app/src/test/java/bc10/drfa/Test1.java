@@ -9,6 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import javax.swing.*;
@@ -31,8 +32,8 @@ public class Test1 {
     @BeforeEach
     void setUp() {
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.get("https://computer-database.gatling.io/");
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();

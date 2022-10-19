@@ -1,4 +1,4 @@
-package bc10.RLLG;
+package bc10.rllg;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class Parte2 {
     WebDriver driver;
@@ -19,8 +19,8 @@ public class Parte2 {
 
     @BeforeEach
     void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.navigate().to("https://computer-database.gatling.io/computers");
         driver.manage().deleteAllCookies();
     }

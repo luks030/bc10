@@ -1,4 +1,4 @@
-package bc10.JJMN;
+package bc10.jjmn;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
 
@@ -23,8 +23,8 @@ public class Test2 {
     @BeforeEach
     void setUp() {
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.get("https://computer-database.gatling.io");
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
