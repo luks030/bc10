@@ -9,12 +9,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
-
 import java.time.Duration;
-
 public class Test2 {
+
 
 
     WebDriver driver;
@@ -22,7 +19,6 @@ public class Test2 {
     //Localizadores
     By btnNewComputerLoc = By.xpath("//a[@id='add']");
     By btnCreateComputerLoc = By.xpath("//input[@value='Create this computer']");
-
     By mensajeErrorLoc = By.xpath("//span[contains(text(),'Failed to refine type : Predicate isEmpty() did no')]");
 
 
